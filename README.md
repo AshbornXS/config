@@ -1,2 +1,2 @@
-# config
-a repo for configs of things I use on windows
+# yasb
+[yasb](https://github.com/amnweb/yasb)
