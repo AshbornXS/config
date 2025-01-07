@@ -1,2 +1,2 @@
-# config
-a repo for configs of things I use on windows
+# Steam
+install [Millennium](https://steambrew.app/)
