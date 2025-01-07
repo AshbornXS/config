@@ -1,2 +1,7 @@
-# config
-a repo for configs of things I use on windows
+# Terminal
+
+install oh-my-posh
+
+install nerdfont
+
+add POSH_THEME_PATH as env for C:\Users\\AppData\Local\Programs\oh-my-posh\themes
