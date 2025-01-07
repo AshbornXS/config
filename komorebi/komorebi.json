@@ -1,0 +1,110 @@
+{
+  "$schema": "https://raw.githubusercontent.com/LGUG2Z/komorebi/v0.1.32/schema.json",
+  "app_specific_configuration_path": "$Env:KOMOREBI_CONFIG_HOME/applications.json",
+  
+  "window_hiding_behaviour": "Cloak",
+  "cross_monitor_move_behaviour": "Insert",
+  "mouse_follows_focus": true,
+
+  "default_workspace_padding": 5,
+  "default_container_padding": 5,
+
+  "transparency": true,
+  "transparency_alpha": 150,
+  "transparency_ignore_rules": [
+    {
+      "kind": "Exe",
+      "id": "yasb",
+      "matching_strategy": "Contains"
+    },
+    {
+      "kind": "Exe",
+      "id": "steamwebhelper",
+      "matching_strategy": "Contains"
+    }
+  ],
+
+  "border": true,
+  "border_width": 5,
+  "border_offset": -1,
+  "border_style": "Rounded",
+  "border_colours": {
+    "stack": "#00a542",
+    "unfocused": "#808080",
+    "monocle": "#ff3399",
+    "single": "#689d6a"
+  },
+
+  "animation": {
+    "enabled": true,
+    "duration": 350,
+    "fps": 60,
+    "style": {
+      "movement": "EaseOutBack",
+      "transparency": "Linear"
+    }
+  },
+
+  "stackbar": {
+    "tabs": {
+      "unfocused_text": "#ffffff",
+      "font_family": "Segoe UI",
+      "focused_text": "#ffffff",
+      "background": "#ffffff",
+      "font_size": 0,
+      "width": 300
+    },
+    "mode": "OnStack",
+    "label": "Process",
+    "height": 40
+  },
+
+  "monitors": [
+    {
+      "workspaces": [
+        {
+          "name": "I",
+          "layout": "BSP"
+        },
+        {
+          "name": "II",
+          "layout": "VerticalStack"
+        },
+        {
+          "name": "III",
+          "layout": "VerticalStack"
+        },
+        {
+          "name": "IV",
+          "layout": "VerticalStack"
+        }
+      ]
+    }
+  ],
+
+  "manage_rules": [
+    {
+      "kind": "Exe",
+      "id": "WindowsTerminal",
+      "matching_strategy": "Contains"
+    },
+    {
+      "kind": "Class",
+      "id": "CASCADIA_HOSTING_WINDOW_CLASS",
+      "matching_strategy": "Contains"
+    }
+  ],
+
+  "ignore_rules": [
+    {
+      "kind": "Title",
+      "id": "WaitForMeKomorebi",
+      "matching_strategy": "Contains"
+    },
+    {
+      "kind": "Exe",
+      "id": "yasb",
+      "matching_strategy": "Contains"
+    }
+  ]
+}

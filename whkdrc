@@ -1,0 +1,99 @@
+## Defining Shell
+.shell powershell
+
+
+###### OEM Keys
+# oem_1 is ;
+# oem_4 is [
+# oem_6 is ]
+######
+
+###### WHKD
+# Reload whkd configuration
+alt + o                 : taskkill /f /im whkd.exe; Start-Process whkd -WindowStyle hidden # restarts whkd
+
+# App shortcuts - The apps will be focused if open, or launched if not open
+alt + f                 : if ($wshell.AppActivate('Microsoft Edge') -eq $False) { start msedge } # open edge
+alt + shift + f         : if ($wshell.AppActivate('Microsoft Edge InPrivate') -eq $False) { Start-Process msedge.exe -ArgumentList "-inprivate" } # open edge in private mode
+alt + t                 : if ($wshell.AppActivate('Terminal') -eq $False) { start wt } # open terminal
+alt + e                 : if ($wshell.AppActivate('Explorer') -eq $False) { start explorer } # open explorer
+######
+
+###### Komorebi
+# Komorebic shortcuts
+alt + q                 : komorebic close # close window
+alt + m                 : komorebic minimize # minimize window
+alt + shift + o         : komorebic reload-configuration # reload komorebi config
+
+#### Window Management
+# Focus windows
+alt + left              : komorebic focus left # focus window to the left
+alt + down              : komorebic focus down # focus window below
+alt + up                : komorebic focus up # focus window above
+alt + right             : komorebic focus right # focus window to the right
+alt + shift + oem_4     : komorebic cycle-focus previous # cycle focus to the previous window
+alt + shift + oem_6     : komorebic cycle-focus next # cycle focus to the next window
+
+# Move windows
+alt + shift + left      : komorebic move left # move window to the left
+alt + shift + down      : komorebic move down # move window below
+alt + shift + up        : komorebic move up # move window above
+alt + shift + right     : komorebic move right # move window to the right
+alt + shift + delete    : komorebic promote # promote window to the top of the stack
+
+# Stack windows
+alt + h                 : komorebic stack left # stack window to the left
+alt + j                 : komorebic stack down # stack window below
+alt + k                 : komorebic stack up # stack window above
+alt + l                 : komorebic stack right # stack window to the right
+alt + oem_1             : komorebic unstack # unstack window
+alt + oem_4             : komorebic cycle-stack previous # cycle stack to the previous window
+alt + oem_6             : komorebic cycle-stack next # cycle stack to the next window
+
+# Manipulate windows
+alt + i                 : komorebic toggle-float # toggle floating mode
+alt + shift + i         : komorebic toggle-monocle # toggle monocle mode
+
+# Window manager options
+alt + shift + r         : komorebic retile # retile windows
+alt + p                 : komorebic toggle-pause # pauses komorebi
+
+# Resize
+alt + oem_plus          : komorebic resize-axis horizontal increase # increase horizontal size
+alt + oem_minus         : komorebic resize-axis horizontal decrease # decrease horizontal size
+alt + shift + oem_plus  : komorebic resize-axis vertical increase # increase vertical size
+alt + shift + oem_minus : komorebic resize-axis vertical decrease # decrease vertical size
+####
+
+
+#### Layout Management
+# Layouts
+alt + x                 : komorebic flip-layout horizontal # flip layout horizontally
+alt + y                 : komorebic flip-layout vertical # flip layout vertically
+####
+
+
+#### Workspaces Management
+# Workspaces
+alt + 1                 : komorebic focus-workspace 0 # focus workspace 1
+alt + 2                 : komorebic focus-workspace 1 # focus workspace 2
+alt + 3                 : komorebic focus-workspace 2 # focus workspace 3
+alt + 4                 : komorebic focus-workspace 3 # focus workspace 4
+alt + 5                 : komorebic focus-workspace 4 # focus workspace 5
+alt + 6                 : komorebic focus-workspace 5 # focus workspace 6
+alt + 7                 : komorebic focus-workspace 6 # focus workspace 7
+alt + 8                 : komorebic focus-workspace 7 # focus workspace 8
+
+# Move windows across workspaces
+alt + shift + 1         : komorebic move-to-workspace 0 # move window to workspace 1
+alt + shift + 2         : komorebic move-to-workspace 1 # move window to workspace 2
+alt + shift + 3         : komorebic move-to-workspace 2 # move window to workspace 3
+alt + shift + 4         : komorebic move-to-workspace 3 # move window to workspace 4
+alt + shift + 5         : komorebic move-to-workspace 4 # move window to workspace 5
+alt + shift + 6         : komorebic move-to-workspace 5 # move window to workspace 6
+alt + shift + 7         : komorebic move-to-workspace 6 # move window to workspace 7
+alt + shift + 8         : komorebic move-to-workspace 7 # move window to workspace 8
+####
+
+
+######
